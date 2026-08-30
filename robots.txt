@@ -1,0 +1,3 @@
+# 公開前は全クローラーを拒否。公開時に Disallow の行を削除する。
+User-agent: *
+Disallow: /

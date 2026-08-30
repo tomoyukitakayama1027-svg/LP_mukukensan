@@ -1,0 +1,21 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# エディタ
+.vscode/
+.idea/
+
+# 依存関係・ビルド
+node_modules/
+dist/
+.cache/
+
+# 秘匿情報（publicにした瞬間に履歴ごと露出するので絶対にコミットしない）
+.env
+.env.*
+*.key
+*.pem
+
+# 社外に出さない資料（見積書・契約書・個人情報など）
+_private/
