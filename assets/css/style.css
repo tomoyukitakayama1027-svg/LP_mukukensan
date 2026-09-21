@@ -124,7 +124,7 @@ nav a:hover::after { width: 100%; }
 }
 .hero-text {
   position: relative; z-index: 2; text-align: center; width: 100%;
-  padding: 84px 24px 40px; display: flex; flex-direction: column; align-items: center;
+  padding: 52px 24px 36px; display: flex; flex-direction: column; align-items: center;
 }
 .hero-kicker {
   font-family: var(--antique); font-size: 0.82rem; font-weight: 700; letter-spacing: 0.2em;
@@ -138,7 +138,7 @@ nav a:hover::after { width: 100%; }
 .hero-copy .em { color: var(--shu); }
 .hero-sub { text-wrap: balance; margin-top: 14px; font-size: clamp(0.9rem, 1.8vw, 1rem); color: var(--ink-soft); font-weight: 500; letter-spacing: 0.06em; }
 .hero-stats {
-  margin-top: 22px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px;
+  margin-top: 16px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px;
   width: min(640px, 100%);
 }
 .hero-stats li {
@@ -149,7 +149,7 @@ nav a:hover::after { width: 100%; }
 .hero-stats .num small { font-size: 0.55em; margin-left: 1px; }
 .hero-stats .lbl { font-size: 0.74rem; font-weight: 700; color: var(--ink-soft); }
 .hero-src { margin-top: 8px; font-size: 0.7rem; color: var(--ink-mute); }
-.hero-actions { margin-top: 22px; display: flex; flex-direction: column; align-items: center; }
+.hero-actions { margin-top: 16px; display: flex; flex-direction: column; align-items: center; }
 
 /* ---------- セクション共通 ---------- */
 section { padding: 104px 24px; }
@@ -506,3 +506,13 @@ footer .copy { margin-top: 18px; font-size: 0.72rem; color: var(--ink-mute); }
 .group-photo img { width: 100%; aspect-ratio: 16 / 7; object-fit: cover; }
 .group-photo figcaption { font-size: 0.78rem; color: var(--ink-soft); text-align: center; padding: 10px; }
 @media (max-width: 600px) { .group-photo img { aspect-ratio: 4 / 3; } }
+
+/* ---------- 追加：募集表示・料金補足・地図リンク ---------- */
+.hero-recruit { margin-bottom: 12px; font-size: 0.86rem; font-weight: 700; color: var(--ink); }
+.hero-recruit b { background: var(--shu); color: #fff; padding: 2px 10px; border-radius: 6px; margin-right: 8px; letter-spacing: 0.08em; }
+.price dd small { font-size: 0.6em; margin-left: 2px; }
+.price .p-sub { margin-top: 2px; font-size: 0.76rem; color: var(--ink-mute); }
+.maplink { color: var(--ai); font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
+.act .meta small { color: var(--ink-mute); font-size: 0.78rem; }
+#members .group-photo img { aspect-ratio: 16 / 9; }
+@media (max-width: 600px) { .price { grid-template-columns: repeat(3, 1fr); gap: 8px; } .price div { padding: 14px 6px; } .price dd { font-size: 1.05rem; } .price .p-sub { font-size: 0.64rem; line-height: 1.5; } .hero-recruit { font-size: 0.78rem; } #members .group-photo img { aspect-ratio: 4 / 3; } }
