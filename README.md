@@ -9,6 +9,7 @@
 - [ ] `index.html` の制作中バー（draft-bar）を削除
 - [ ] `index.html` の `<meta name="robots" content="noindex, nofollow">` を削除
 - [ ] `robots.txt` の `Disallow: /` を削除
+- [ ] `vercel.json` の `X-Robots-Tag: noindex` を削除
 - [ ] コミット履歴に秘匿情報（APIキー・個人情報・見積書等）が入っていないか確認
 - [ ] `_private/` に社外秘資料が残っていないか確認
 - [ ] リポジトリを private → public に変更
