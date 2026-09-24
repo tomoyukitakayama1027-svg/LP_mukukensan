@@ -180,7 +180,7 @@ section { padding: 100px 24px; }
 
 /* ---------- 04 メンバー ---------- */
 .group-photo { margin: 0; border-radius: var(--r); overflow: hidden; }
-.group-photo img { width: 100%; aspect-ratio: 16 / 8; object-fit: cover; object-position: 50% 42%; }
+.group-photo img { width: 100%; }
 .numbers { margin-top: 28px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; text-align: center; }
 .numbers li { background: var(--white); border: 1px solid var(--line); border-radius: var(--r); padding: 22px 12px; }
 .numbers .num { display: block; font-family: var(--serif); font-size: clamp(2rem, 5vw, 2.8rem); font-weight: 800; color: var(--shu); line-height: 1.2; }
@@ -270,7 +270,6 @@ footer .copy { margin-top: 14px; font-size: 0.72rem; color: var(--ink-mute); }
   .weapons, .acts, .voices, .results, .works { grid-template-columns: 1fr; }
   .rep { grid-template-columns: 1fr; gap: 24px; }
   .rep-photo { max-width: 220px; }
-  .group-photo img { aspect-ratio: 4 / 3; }
   .join-wrap { padding: 30px 18px 34px; }
   .flow { grid-template-columns: 1fr 1fr; row-gap: 18px; }
 }
@@ -389,3 +388,12 @@ h1, h2, h3, h4, .hero-lead, .sec-lead, .lead, .range, .catch, .recruit p, .lbl, 
   .rb-main { font-size: 1rem; }
   .gallery { grid-template-columns: 1fr 1fr; gap: 8px; }
 }
+
+/* ---------- ヒーローのロゴ ---------- */
+.hero-logo { width: min(340px, 78%); margin: 22px 0 4px; }
+
+/* ---------- ポッドキャスト ---------- */
+.podcasts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+.podcasts iframe { width: 100%; border: 0; border-radius: 12px; }
+@media (max-width: 760px) { .podcasts { grid-template-columns: 1fr; } }
+@media (max-width: 600px) { .hero-logo { width: 66%; margin: 16px 0 2px; } }
