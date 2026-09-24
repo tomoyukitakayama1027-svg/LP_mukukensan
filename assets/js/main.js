@@ -34,3 +34,21 @@ var FORM_URL = '';
     new IntersectionObserver(function (e) { joinVisible = e[0].isIntersecting; update(); }, { threshold: 0.05 }).observe(join);
   }
 })();
+
+// 動画のサムネイルをクリックしたらYouTubeを読み込んで再生する
+(function () {
+  var btn = document.getElementById('yt-play');
+  if (!btn) return;
+  btn.addEventListener('click', function () {
+    var f = document.createElement('iframe');
+    f.src = 'https://www.youtube-nocookie.com/embed/' + btn.dataset.id + '?autoplay=1';
+    f.title = '無垢研鑽 紹介動画';
+    f.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+    f.referrerPolicy = 'strict-origin-when-cross-origin';
+    f.allowFullscreen = true;
+    var wrap = document.createElement('div');
+    wrap.className = 'video-frame';
+    wrap.appendChild(f);
+    btn.replaceWith(wrap);
+  });
+})();

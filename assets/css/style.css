@@ -320,13 +320,12 @@ h1, h2, h3, h4, .hero-lead, .sec-lead, .lead, .range, .catch, .recruit p, .lbl, 
 .reg-flow h4 { margin-top: 8px; font-family: var(--serif); font-size: 1.15rem; font-weight: 800; }
 .reg-flow p { margin-top: 4px; font-size: 0.86rem; color: var(--ink-soft); line-height: 1.8; }
 .reg-label { margin: 36px 0 14px; font-weight: 700; color: var(--ai); letter-spacing: 0.08em; }
-.themes { display: grid; grid-template-columns: 1.3fr 1fr 1fr; gap: 14px; align-items: start; }
-.theme { background: var(--paper-2); border-radius: var(--r); padding: 22px 22px 24px; }
-.t-kind { display: inline-block; background: var(--ink); color: #fff; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; padding: 2px 12px; border-radius: 999px; }
-.theme ul { margin-top: 12px; display: grid; gap: 10px; }
-.theme li { position: relative; padding-left: 16px; font-size: 0.88rem; line-height: 1.75; color: var(--ink-soft); }
-.theme li::before { content: ""; position: absolute; left: 0; top: 0.72em; width: 6px; height: 6px; border-radius: 50%; background: var(--shu); }
-.theme b { color: var(--ink); }
+.theme-block { margin-bottom: 26px; }
+.theme-items { margin-top: 12px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.ti { background: var(--white); border: 1px solid var(--line); border-radius: var(--r); padding: 20px 22px; }
+.ti h4 { font-family: var(--serif); font-size: 1.12rem; font-weight: 800; line-height: 1.5; }
+.ti p { margin-top: 6px; font-size: 0.88rem; color: var(--ink-soft); line-height: 1.8; }
+.t-kind { display: inline-block; background: var(--ink); color: #fff; font-size: 0.85rem; font-weight: 700; letter-spacing: 0.12em; padding: 4px 18px; border-radius: 999px; }
 
 /* ---------- メンバー構成・入会理由 ---------- */
 .stats { margin-top: 28px; display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
@@ -379,7 +378,7 @@ h1, h2, h3, h4, .hero-lead, .sec-lead, .lead, .range, .catch, .recruit p, .lbl, 
 .video-frame { aspect-ratio: 16 / 9; }
 .gallery { margin-top: 20px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
 .gallery figure { margin: 0; border-radius: var(--r); overflow: hidden; }
-.gallery img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; transition: transform .5s; }
+.gallery img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; transition: transform .5s; }
 .gallery figure:hover img { transform: scale(1.05); }
 
 @media (max-width: 760px) {
@@ -397,3 +396,24 @@ h1, h2, h3, h4, .hero-lead, .sec-lead, .lead, .range, .catch, .recruit p, .lbl, 
 .podcasts iframe { width: 100%; border: 0; border-radius: 12px; }
 @media (max-width: 760px) { .podcasts { grid-template-columns: 1fr; } }
 @media (max-width: 600px) { .hero-logo { width: 66%; margin: 16px 0 2px; } }
+
+/* ---------- 動画のサムネイル（クリックで再生） ---------- */
+.video-frame.yt { display: block; width: 100%; padding: 0; border: 1px solid var(--line); cursor: pointer; background: var(--ink); }
+.video-frame.yt img { width: 100%; height: 100%; object-fit: cover; }
+.yt-btn { position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); width: 84px; height: 60px; border-radius: 14px; background: rgba(214,69,46,0.92); transition: transform .2s, background .2s; }
+.yt-btn::after { content: ""; position: absolute; left: 50%; top: 50%; transform: translate(-40%,-50%); border-style: solid; border-width: 12px 0 12px 20px; border-color: transparent transparent transparent #fff; }
+.video-frame.yt:hover .yt-btn { background: var(--shu); transform: translate(-50%,-50%) scale(1.06); }
+
+/* ---------- メンバー構成のグラフ ---------- */
+.stat-card h4 small { font-size: 0.72rem; font-weight: 500; color: var(--ink-mute); margin-left: 8px; }
+.stat-card h4.mt { margin-top: 26px; }
+.stat-card.wide { grid-column: 1 / -1; }
+.b-head b { color: var(--ai); }
+.b-track i { background: var(--ai); }
+.b-track { background: var(--ai-soft); }
+.bar.hot .b-head b { color: var(--shu); }
+.bar.hot .b-track { background: var(--shu-soft); }
+.bar.hot .b-track i { background: var(--shu); }
+
+@media (max-width: 960px) { .theme-items { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 600px) { .theme-items { grid-template-columns: 1fr; } .yt-btn { width: 64px; height: 46px; } }
