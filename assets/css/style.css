@@ -94,7 +94,7 @@ nav a:hover { color: var(--shu); }
 /* ---------- ヒーロー（文字と写真を左右に分け、写真に文字を重ねない） ---------- */
 .hero {
   max-width: 1160px; margin: 0 auto; padding: 64px 24px 88px;
-  display: grid; grid-template-columns: 1.1fr 1fr; gap: 56px; align-items: center;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center;
   min-height: min(calc(100vh - 90px), 760px);
 }
 .hero-kicker {
@@ -103,14 +103,11 @@ nav a:hover { color: var(--shu); }
 }
 .hero-title {
   margin-top: 26px; font-family: var(--serif); font-weight: 800;
-  font-size: clamp(2.2rem, 3.9vw, 3.3rem); line-height: 1.45; letter-spacing: 0.03em;
+  font-size: clamp(1.7rem, 3.35vw, 2.7rem); line-height: 1.5; letter-spacing: 0.03em;
 }
 .hero-title .line { display: block; white-space: nowrap; }
 .hero-title .em { color: var(--shu); }
-.hero-lead { margin-top: 24px; font-size: 1.02rem; color: var(--ink-soft); line-height: 2; }
-.hero-actions { margin-top: 36px; display: flex; flex-direction: column; align-items: flex-start; gap: 14px; }
-.hero-recruit { font-size: 0.86rem; font-weight: 700; }
-.hero-recruit b { background: var(--ink); color: #fff; padding: 2px 10px; border-radius: 6px; margin-right: 10px; letter-spacing: 0.08em; }
+.hero-actions { margin-top: 34px; }
 .hero-photo { border-radius: 24px; overflow: hidden; box-shadow: 0 24px 50px rgba(22,19,15,0.12); }
 .hero-photo img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: 62% 30%; }
 
@@ -139,11 +136,6 @@ section { padding: 100px 24px; }
 .concept-catch { font-family: var(--serif); font-size: clamp(1.5rem, 3.6vw, 2.2rem); font-weight: 800; line-height: 1.7; letter-spacing: 0.04em; }
 .concept-catch .u { background: linear-gradient(transparent 64%, rgba(214,69,46,0.22) 64%); }
 .concept-body { margin-top: 20px; max-width: 680px; color: var(--ink-soft); }
-.weapons { margin-top: 44px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
-.weapon { background: var(--white); border: 1px solid var(--line); border-radius: var(--r); padding: 26px 24px; }
-.weapon .w-ic { width: 44px; height: 44px; border-radius: 12px; background: var(--shu-soft); color: var(--shu); display: flex; align-items: center; justify-content: center; font-family: var(--serif); font-size: 1.2rem; font-weight: 800; margin-bottom: 12px; }
-.weapon h3 { font-size: 1.08rem; font-weight: 700; }
-.weapon p { font-size: 0.88rem; color: var(--ink-soft); line-height: 1.8; margin-top: 4px; }
 .values { display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px; }
 .values li { background: var(--white); border: 1px solid var(--line); border-radius: var(--r); padding: 26px 20px; }
 .values .v-no { display: block; font-family: var(--serif); font-size: 1.6rem; font-weight: 800; color: var(--shu); line-height: 1; margin-bottom: 14px; }
@@ -288,9 +280,8 @@ footer .copy { margin-top: 14px; font-size: 0.72rem; color: var(--ink-mute); }
   .pc-only { display: none; }
   .hero { padding-top: 36px; }
   .hero-kicker { font-size: 0.74rem; letter-spacing: 0.08em; }
-  .hero-title { margin-top: 18px; font-size: clamp(1.95rem, 8.6vw, 2.4rem); }
-  .hero-lead { font-size: 0.94rem; margin-top: 18px; }
-  .hero-actions { margin-top: 26px; align-items: stretch; }
+  .hero-title { margin-top: 18px; font-size: clamp(1.45rem, 6.9vw, 2rem); }
+    .hero-actions { margin-top: 26px; align-items: stretch; }
   .hero-recruit { text-align: center; font-size: 0.8rem; }
   .btn-lg { padding: 17px 20px; font-size: 1rem; width: 100%; }
   .numbers { gap: 8px; }
@@ -373,4 +364,28 @@ h1, h2, h3, h4, .hero-lead, .sec-lead, .lead, .range, .catch, .recruit p, .lbl, 
   .values p { margin-top: 2px; }
   .reg-flow { grid-template-columns: 1fr; }
   .reg-flow li::after { display: none; }
+}
+
+/* ---------- 募集の帯 ---------- */
+.recruit-band { background: var(--shu); color: #fff; padding: 20px 24px; }
+.rb-inner { max-width: 1040px; margin: 0 auto; display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 14px 24px; }
+.rb-badge { font-family: var(--serif); font-size: 1.25rem; font-weight: 800; letter-spacing: 0.1em; background: #fff; color: var(--shu); padding: 5px 20px; border-radius: 999px; white-space: nowrap; }
+.rb-main { font-size: 1.15rem; font-weight: 700; letter-spacing: 0.06em; }
+.rb-main b { font-family: var(--serif); font-size: 1.3em; margin: 0 2px; }
+.rb-cta { display: inline-flex; align-items: center; gap: 8px; background: var(--ink); color: #fff; font-weight: 700; font-size: 0.95rem; padding: 13px 26px; border-radius: 999px; transition: transform .2s, background .2s; white-space: nowrap; }
+.rb-cta:hover { transform: translateY(-2px); background: #000; }
+
+/* ---------- 動画・ギャラリー ---------- */
+.video-frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.video-frame { aspect-ratio: 16 / 9; }
+.gallery { margin-top: 20px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+.gallery figure { margin: 0; border-radius: var(--r); overflow: hidden; }
+.gallery img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; transition: transform .5s; }
+.gallery figure:hover img { transform: scale(1.05); }
+
+@media (max-width: 760px) {
+  .rb-inner { flex-direction: column; gap: 12px; text-align: center; }
+  .rb-badge { font-size: 1.1rem; }
+  .rb-main { font-size: 1rem; }
+  .gallery { grid-template-columns: 1fr 1fr; gap: 8px; }
 }
