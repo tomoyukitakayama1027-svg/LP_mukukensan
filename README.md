@@ -23,3 +23,11 @@ assets/images/    画像
 docs/             制作メモ・仕様
 _private/         社外秘（Git管理外）
 ```
+
+## 使っている外部ライブラリ
+- BudouX（Google／Apache-2.0）: `assets/js/budoux-ja.min.js`
+  日本語を文節で折り返すために使用。外部サーバーではなくリポジトリ内に置いている。
+
+## 更新時のメモ
+- `index.html` の `style.css?v=…` / `main.js?v=…` の数字は、CSSやJSを直したら新しくする。
+  閲覧者のブラウザに古いファイルが残るのを防ぐため。

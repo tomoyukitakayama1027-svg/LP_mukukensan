@@ -457,3 +457,24 @@ h1, h2, h3, h4, .hero-lead, .sec-lead, .lead, .range, .catch, .recruit p, .lbl, 
 
 /* ---------- 「こんな方へ」の締めの一文 ---------- */
 .foryou-lead { margin-top: 26px; text-align: center; font-family: var(--serif); font-size: clamp(1.15rem, 2.6vw, 1.45rem); font-weight: 800; line-height: 1.9; letter-spacing: 0.04em; }
+
+/* ---------- 日本語の改行位置を整える ----------
+   auto-phrase: 文節の切れ目で折り返す（対応ブラウザのみ）
+   pretty / balance: 最終行が1〜2文字だけ残るのを防ぐ */
+p, li, dd, dt, summary, cite, figcaption, .lg-l, .b-head span, .act .meta dd {
+  word-break: auto-phrase;
+  text-wrap: pretty;
+}
+h1, h2, h3, h4, .concept-catch, .catch, .foryou-lead, .recruit p, .iv-role,
+.voice-card p, .results li, .checks li, .b-head span, .lg-l, .hero-kicker,
+.sec-lead, .range, .btn, .cta-note, .src, .chart-note, .flow p, .ti p, .weapon p {
+  text-wrap: balance;
+}
+
+@media (max-width: 760px) {
+  /* 円グラフの凡例は幅が足りず3行に折り返すため、グラフの下に全幅で置く */
+  .pie-wrap { flex-direction: column; align-items: flex-start; gap: 18px; }
+  .legend { width: 100%; }
+  .legend li { grid-template-columns: 12px 1fr auto auto; }
+  .b-head { font-size: 0.84rem; }
+}
