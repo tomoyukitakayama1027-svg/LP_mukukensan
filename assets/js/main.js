@@ -52,32 +52,3 @@ var FORM_URL = 'https://resilient-bagel-c1a.notion.site/3202e3257cf480a8b157d3d3
     btn.replaceWith(wrap);
   });
 })();
-
-// 日本語の改行位置を文節単位にそろえる（BudouX / Apache-2.0）
-// iPhoneのSafariなど word-break: auto-phrase 未対応のブラウザでも効く
-(function () {
-  var TARGET = [
-    '.hero-kicker', '.hero-title', '.rb-main', '.sec-title', '.sec-lead',
-    '.concept-catch', '.concept-body', '.values h4', '.values p',
-    '.act h3', '.act p', '.act .meta dd', '.ti h4', '.ti p', '.reg-label',
-    '.rep-bio p', '.works li', '.disclaimer', '.pod h4', '.pod p',
-    '.numbers .lbl', '.legend .lg-l', '.b-head span', '.stat-card h4', '.chart-note',
-    '.voice-card p', '.results li', '.iv-role', '.iv-qa dd',
-    '.checks li', '.range', '.foryou-lead', '.recruit p', '.flow h4', '.flow p',
-    '.apply .lead', '.faq summary', '.faq .a p', '.final .catch', '.final .lead',
-    '.contact-box p', '.btn', '.cta-note', '.src'
-  ].join(',');
-
-  var s = document.createElement('script');
-  s.src = 'assets/js/budoux-ja.min.js?v=202609242316';
-  s.onload = function () {
-    if (!window.customElements || !customElements.get('budoux-ja')) return;
-    document.querySelectorAll(TARGET).forEach(function (el) {
-      if (el.closest('budoux-ja')) return;
-      var w = document.createElement('budoux-ja');
-      while (el.firstChild) w.appendChild(el.firstChild);
-      el.appendChild(w);
-    });
-  };
-  document.head.appendChild(s);
-})();
