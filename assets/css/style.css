@@ -389,7 +389,7 @@ footer .copy { margin-top: 14px; font-size: 0.72rem; color: var(--ink-mute); }
 }
 
 /* ---------- ヒーローのロゴ ---------- */
-.hero-logo { width: min(460px, 92%); margin: 24px 0 6px; }
+.hero-logo { width: min(460px, 92%); margin: 0 0 6px; }
 
 /* ---------- ポッドキャスト ---------- */
 .podcasts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
