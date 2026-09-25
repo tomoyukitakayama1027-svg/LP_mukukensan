@@ -469,3 +469,10 @@ footer .copy { margin-top: 14px; font-size: 0.72rem; color: var(--ink-mute); }
   .legend li { grid-template-columns: 12px 1fr auto auto; }
   .b-head { font-size: 0.84rem; }
 }
+
+/* ---------- 追加調整 ---------- */
+.sec-lead.big { font-size: clamp(1.02rem, 2.2vw, 1.22rem); line-height: 2; color: var(--ink); }
+.sec-lead.big b { font-weight: 800; }
+.act h3 small { display: block; font-family: var(--gothic); font-size: 0.78rem; font-weight: 700; color: var(--ink-mute); margin-top: 2px; }
+.sec-title rt { font-size: 0.34em; font-weight: 700; letter-spacing: 0.08em; color: var(--ink-mute); }
+.join-wrap .price { margin-top: 0; }
