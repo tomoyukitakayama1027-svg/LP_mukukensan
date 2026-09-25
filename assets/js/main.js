@@ -53,3 +53,15 @@ var FORM_URL = 'https://resilient-bagel-c1a.notion.site/3202e3257cf480a8b157d3d3
     btn.replaceWith(wrap);
   });
 })();
+
+// スマホ用：ページの先頭に戻るボタン（少しスクロールしたら表示）
+(function () {
+  var btn = document.getElementById('to-top');
+  if (!btn) return;
+  var toggle = function () { btn.classList.toggle('show', window.scrollY > 400); };
+  toggle();
+  window.addEventListener('scroll', toggle, { passive: true });
+  btn.addEventListener('click', function () {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+})();

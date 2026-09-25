@@ -476,3 +476,17 @@ footer .copy { margin-top: 14px; font-size: 0.72rem; color: var(--ink-mute); }
 .act h3 small { display: block; font-family: var(--gothic); font-size: 0.78rem; font-weight: 700; color: var(--ink-mute); margin-top: 2px; }
 .sec-title rt { font-size: 0.34em; font-weight: 700; letter-spacing: 0.08em; color: var(--ink-mute); }
 .join-wrap .price { margin-top: 0; }
+
+/* ---------- スマホ用：先頭に戻るボタン ---------- */
+.to-top {
+  position: fixed; right: 14px; bottom: 78px; z-index: 61;
+  width: 46px; height: 46px; border-radius: 50%;
+  background: rgba(255,255,255,0.94); color: var(--ink);
+  border: 1px solid var(--line); box-shadow: 0 6px 18px rgba(22,19,15,0.18);
+  font-size: 1.1rem; line-height: 1; cursor: pointer;
+  display: none; align-items: center; justify-content: center;
+  opacity: 0; transform: translateY(10px); transition: opacity .25s, transform .25s;
+  -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px);
+}
+.to-top.show { opacity: 1; transform: none; }
+@media (max-width: 960px) { .to-top { display: flex; } }
