@@ -15,12 +15,13 @@ var FORM_URL = 'https://resilient-bagel-c1a.notion.site/3202e3257cf480a8b157d3d3
     els.forEach(function (e) { io.observe(e); });
   }
 
-  // 申し込みボタンの飛び先
-  var apply = document.getElementById('apply-btn');
-  if (apply && FORM_URL) {
-    apply.href = FORM_URL;
-    apply.target = '_blank';
-    apply.rel = 'noopener';
+  // 申し込みボタンの飛び先（すべてのCTAをフォームへ）
+  if (FORM_URL) {
+    document.querySelectorAll('a[data-cta]').forEach(function (a) {
+      a.href = FORM_URL;
+      a.target = '_blank';
+      a.rel = 'noopener';
+    });
   }
 
   // スマホ追従ボタン：ヒーローを過ぎたら表示、入会セクションが見えている間は隠す
