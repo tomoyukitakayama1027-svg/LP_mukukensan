@@ -490,3 +490,7 @@ footer .copy { margin-top: 14px; font-size: 0.72rem; color: var(--ink-mute); }
 }
 .to-top.show { opacity: 1; transform: none; }
 @media (max-width: 960px) { .to-top { display: flex; } }
+
+/* ---------- ヒーローの見出し（ロゴ＋キャッチを1つの h1 に） ---------- */
+.hero-h1 { margin: 0; font: inherit; }
+.hero-h1 .hero-title { display: block; }
